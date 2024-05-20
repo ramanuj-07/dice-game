@@ -1,12 +1,19 @@
-import Startgame from "./components/Startgame"
+import Startgame from "./components/Startgame";
+import Playgame from "./components/Playgame";
 import './App.css'
 
-function App() {
+import { useState } from "react";
 
+function App() {
+  const [isGameStarted, setIsGameStarted] = useState(true);
+
+  function toggleGame() {
+    setIsGameStarted((prev) => !prev);
+  };
+ 
   return (
     <>
-      <Startgame />
-      
+      {isGameStarted ? <Playgame /> : <Startgame toggle={toggleGame} />}
     </>
   );
 }
