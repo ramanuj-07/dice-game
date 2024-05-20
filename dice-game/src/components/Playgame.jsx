@@ -1,10 +1,12 @@
+import NumberSelector from './NumberSelector';
 import Totalscore from './Totalscore';
 
 function Playgame() {
     
     return (
         <main>
-<Totalscore/>
+            <Totalscore />
+            <NumberSelector/>
        </main>
     )
 }
