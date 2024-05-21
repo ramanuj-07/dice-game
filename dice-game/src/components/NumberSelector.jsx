@@ -1,27 +1,24 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-function NumberSelector() {
+function NumberSelector({ selectNumber, setSelectNumber }) {
     const numberArr = [1, 2, 3, 4, 5, 6];
-
-    const [selectNumber, setSelectNumber] = useState();
 
     console.log(selectNumber);
     return (
-<NumberSelectorContainer>
-             <div className="flex">
-            {
-                numberArr.map((value, i) => (
-                    <Box key={i}
-                        isSelected={(value === selectNumber)}
-                        onClick={() => setSelectNumber(value)} >{value}</Box> 
-                ))
-            } 
-           
+        <NumberSelectorContainer>
+            <div className="flex">
+                {
+                    numberArr.map((value, i) => (
+                        <Box key={i}
+                            isSelected={(value === selectNumber)}
+                            onClick={() => setSelectNumber(value)} >{value}</Box>
+                    ))
+                }
             </div>
             <p>Select Number</p>
-</NumberSelectorContainer>
-       
+        </NumberSelectorContainer>
+
 
     );
 
