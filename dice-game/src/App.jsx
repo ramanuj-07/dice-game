@@ -5,7 +5,7 @@ import './App.css'
 import { useState } from "react";
 
 function App() {
-  const [isGameStarted, setIsGameStarted] = useState(true);
+  const [isGameStarted, setIsGameStarted] = useState(false);
 
   function toggleGame() {
     setIsGameStarted((prev) => !prev);

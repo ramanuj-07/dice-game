@@ -11,7 +11,7 @@ function NumberSelector({ selectNumber, setSelectNumber }) {
                 {
                     numberArr.map((value, i) => (
                         <Box key={i}
-                            isSelected={(value === selectNumber)}
+                            isSelected={(value == selectNumber)}
                             onClick={() => setSelectNumber(value)} >{value}</Box>
                     ))
                 }
