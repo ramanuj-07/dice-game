@@ -4,8 +4,9 @@ function Totalscore() {
     return (
         <ScoreContainer>
             <h1>0</h1>
-            <p>Total Score</p>
+              <p>Total Score</p>
       </ScoreContainer>
+    
     );
 };
 export default Totalscore;
